@@ -21,7 +21,7 @@ export const insertObj = (
   objArray: objInterface[],
   obj: objInterface
 ): objInterface[] => {
-  if (obj.order >= objArray.length) {
+  if (obj.order > objArray.length) {
     return [...objArray, obj];
   }
   const indexToInsert = obj.order - 1;
