@@ -3,7 +3,6 @@ import {
   filterObjArr2,
   insertObj,
   insertObj2,
-  // insertObj2,
   reorderArray,
   sortObjArr
 } from ".";
