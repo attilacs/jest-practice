@@ -1,16 +1,26 @@
-import { obj, objArray } from "./variables";
+import { objInterface } from "./variables";
 
-export const filterObjArr = (objArray: obj[], obj: obj): obj[] => {
+export const filterObjArr = (
+  objArray: objInterface[],
+  obj: objInterface
+): objInterface[] => {
   return objArray.filter((item) => item.name !== obj.name);
 };
 
-export const filterObjArr2 = (objArray: obj[], obj1: obj, obj2: obj): obj[] => {
+export const filterObjArr2 = (
+  objArray: objInterface[],
+  obj1: objInterface,
+  obj2: objInterface
+): objInterface[] => {
   return objArray.filter(
     (item) => item.name !== obj1.name && item.name !== obj2.name
   );
 };
 
-export const insertObj = (objArray: obj[], obj: obj): obj[] => {
+export const insertObj = (
+  objArray: objInterface[],
+  obj: objInterface
+): objInterface[] => {
   if (obj.order >= objArray.length) {
     return [...objArray, obj];
   }
@@ -22,9 +32,13 @@ export const insertObj = (objArray: obj[], obj: obj): obj[] => {
   ];
 };
 
-export const insertObj2 = (objArray: obj[], obj1: obj, obj2: obj): obj[] => {
-  let firstObj: obj;
-  let secondObj: obj;
+export const insertObj2 = (
+  objArray: objInterface[],
+  obj1: objInterface,
+  obj2: objInterface
+): objInterface[] => {
+  let firstObj: objInterface;
+  let secondObj: objInterface;
   if (obj1.order < obj2.order) {
     firstObj = obj1;
     secondObj = obj2;
@@ -50,11 +64,11 @@ export const insertObj2 = (objArray: obj[], obj1: obj, obj2: obj): obj[] => {
   }
 };
 
-export const sortObjArr = (objArray: obj[]): obj[] => {
+export const sortObjArr = (objArray: objInterface[]): objInterface[] => {
   return objArray.sort((a, b) => a.order - b.order);
 };
 
-export const reorderArray = (array: obj[]): obj[] => {
+export const reorderArray = (array: objInterface[]): objInterface[] => {
   let order = 1;
   for (let i = 0; i < array.length; i++) {
     if (array[i]["order"] !== order) {

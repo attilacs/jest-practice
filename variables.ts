@@ -1,4 +1,4 @@
-export interface obj {
+export interface objInterface {
   order: number;
   name: string;
 }
