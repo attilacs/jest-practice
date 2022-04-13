@@ -68,8 +68,8 @@ export const insertedArray3 = [
   { order: 2, name: "b" },
   { order: 3, name: "three" },
   { order: 3, name: "c" },
-  { order: 4, name: "d" },
   { order: 5, name: "five" },
+  { order: 4, name: "d" },
   { order: 5, name: "e" }
 ];
 
